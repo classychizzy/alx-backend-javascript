@@ -1,1 +1,1 @@
-#introduction to promises
+# Understanding JavaScript Promises
