@@ -1,6 +1,6 @@
-// a function that displays a message
+// a program that prints to stdout
 function displayMessage(str) {
-  console.log(str);
-}
+	console.log(str);
+};
 
 module.exports = displayMessage;
