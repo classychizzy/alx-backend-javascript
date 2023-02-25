@@ -1,12 +1,8 @@
-/* a program that rounds up numbers and calculates
- * the sum of the number
- */
-
-const calculateNumber = (a, b) => {
-	let roundedNumber1 = Math.ceil(a);
-	let roundedNumber2 = Math.ceil(b);
-	sum = roundedNumber1 + roundedNumber2;
-	return sum;
-};
+function calculateNumber(a, b) {
+    const an = Math.round(a);
+    const bn = Math.round(b);
+    const c = an + bn;
+    return c;
+}
 
 module.exports = calculateNumber;

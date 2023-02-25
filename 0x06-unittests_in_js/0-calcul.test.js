@@ -1,22 +1,31 @@
-/* test for the calculateNumber function
- */
-const calculateNumber = require('./0-calcul');
-const assert = require('chai').assert;
+const assert = require("assert");
+const { it, describe } = require("mocha");
+const calculateNumber = require("./0-calcul");
 
-describe('calculateNumber', function () {
-	it('rounds a fractional number and calculates the sum', () => {
-		assert.strictEqual(calculateNumber(1.5, 2.3), 5);
-	});
+describe("calculateNumber()", function() {
 
-	it('rounds a floating number and calculates the sum', () => {
-		assert.strictEqual(calculateNumber(1.0, 2.0), 3);
-	});
-
-	it('rounds a floating and fractional number then sums it', () => {
-		assert.strictEqual(calculateNumber(1.0, 2.5), 4);
-	});
-	
-	it('rounds a fractional and a floating number then sums it', () => {
-		assert.strictEqual(calculateNumber(1.5, 2.0), 4);
-	});
+    it(`checking if numbers round`, function() {
+      const res = calculateNumber(1, 2);
+      assert.strictEqual(res, 3);
+    });
+    it(`checking if numbers round`, function() {
+      const res = calculateNumber(1.4, 2.2);
+      assert.strictEqual(res, 3);
+    });
+    it(`checking if numbers round`, function() {
+      const res = calculateNumber(1.6, 2.7);
+      assert.strictEqual(res, 5);
+    });
+    it(`checking if numbers round`, function() {
+      const res = calculateNumber(0, 0);
+      assert.strictEqual(res, 0);
+    });
+    it(`checking if numbers round`, function() {
+      const res = calculateNumber(-1.6, -1.7);
+      assert.strictEqual(res, -4);
+    });
+    it(`checking if numbers round`, function() {
+      const res = calculateNumber(-1.4, -1.3);
+	assert.strictEqual(res, -2);
+    });
 });
